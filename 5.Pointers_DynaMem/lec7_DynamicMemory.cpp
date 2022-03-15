@@ -5,7 +5,7 @@ using namespace std;
 int main(){
 
    
-    int a[100];// this allocates memory on the stack frame, and is static in nature
+    int b[100];// this allocates memory on the stack frame, and is static in nature
     //allocated by the commpiler, when the use of the function is gone then the memory is also deallocated by the compiler
 
     //But sometimes we don't know the exact size we need at the copile time so we go for 
@@ -22,7 +22,13 @@ int main(){
     // with new keyword we can use “nothrow” in parameter because if due to mem leak or other reason there is not enough mem, then nothrow makes it return null to the pointer
     int *a =new(nothrow) int[100];
 
+    a[0]=3232;
+    a[1]=22;
+
+    cout<<a[1] ;
     delete []a;
+    //if we print something from the array a here after deleting the o/p will be unpridictable
+   ;
 
     //memory leak. if a function which uses dynamic mem is called iteratively many times then a big chance is there that, mem leak can happen and storage can get full , if we don't delete the allocated mem after deleting 
 }
