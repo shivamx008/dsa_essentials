@@ -168,6 +168,9 @@ int main()
     //swap functions , swap(vec1,vec2)
     //lower bound , upper bound functions
 
+    cout<<source.size()<<" ";// this prints the size of memory 
+    cout<<source.capacity()<<" ";//  this prints the total alloted memory
+
     //To defining 2d vectors
     //  1st way
 
